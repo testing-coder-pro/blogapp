@@ -1,54 +1,6 @@
+import { getData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-
-const blogList = [
-  {
-    id: 1,
-    title: "title",
-    desc: "desc",
-    imgUrl: "/1g.png",
-  },
-  {
-    id: 2,
-    title: "title",
-    desc: "desc",
-    imgUrl: "/1g.png",
-  },
-  {
-    id: 3,
-    title: "title",
-    desc: "desc",
-    imgUrl: "/1g.png",
-  },
-  {
-    id: 4,
-    title: "title",
-    desc: "desc",
-    imgUrl: "/1g.png",
-  },
-  {
-    id: 5,
-    title: "title",
-    desc: "desc",
-    imgUrl: "/1g.png",
-  },
-  {
-    id: 6,
-    title: "title",
-    desc: "desc",
-    imgUrl: "/1g.png",
-  },
-];
-
-const getData = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-
-  if (!res.ok) {
-    throw new Error("Something went wrong data not fetched");
-  }
-
-  return await res.json();
-};
 
 const BlogPage = async () => {
   const blogData = await getData();

@@ -4,6 +4,7 @@ import { useState } from "react";
 import NavLinks from "./NavLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MenuIcon } from "lucide-react";
 
 const navlinks = [
   {
@@ -36,8 +37,11 @@ const Navbar = () => {
         BlogApp
       </div>
       <NavLinks />
-      <button className="md:hidden" onClick={() => setOpenSidebar(true)}>
-        Open
+      <button
+        className="md:hidden cursor-pointer"
+        onClick={() => setOpenSidebar(true)}
+      >
+        <MenuIcon />
       </button>
       {openSidebar && (
         <>
